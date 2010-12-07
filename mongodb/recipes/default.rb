@@ -65,5 +65,5 @@ template "/etc/mongodb/mongodb.conf" do
   owner "root"
   group "root"
   mode 0744
-  notifies :restart, resources(:service => "mongodb")
+  notifies :start, resources(:service => "mongodb")
 end
